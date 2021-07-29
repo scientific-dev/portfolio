@@ -50,7 +50,7 @@
 		if (!elementState.aboutContentViewed) {
 			var aboutContentElement = document.getElementById('abt-content');
 			var { top, bottom } = aboutContentElement.getBoundingClientRect();
-			
+
 			if (top - window.innerHeight <= 0 && bottom - window.innerHeight <= 0) {
 				elementState.aboutContentViewed = true;
 				const write = async (content) => {
@@ -172,7 +172,7 @@
                         <i class="far fa-folder-open fa-2x"/>
                         <span style="float: right;">
                             <a href={project.link}><i class="fas fa-external-link-alt"/></a>
-							{#each project.buttons as button}
+                            {#each project.buttons as button}
 							    <a href={button.href}><i class={button.svg}/></a>
 							{/each}
                         </span>

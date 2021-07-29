@@ -508,11 +508,11 @@ var app = (function () {
     			i = element("i");
     			t = space();
     			attr_dev(i, "class", `fab fa-${/*link*/ ctx[24].name}`);
-    			add_location(i, file, 130, 4, 5169);
+    			add_location(i, file, 130, 4, 5166);
     			attr_dev(a, "style", `background-color: #${/*link*/ ctx[24].color};`);
     			attr_dev(a, "class", `socialcard social-${/*link*/ ctx[24].name}`);
     			attr_dev(a, "href", /*link*/ ctx[24].url);
-    			add_location(a, file, 129, 6, 5060);
+    			add_location(a, file, 129, 6, 5057);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -549,7 +549,7 @@ var app = (function () {
     			attr_dev(img, "draggable", "false");
     			set_style(img, "cursor", "pointer");
     			attr_dev(img, "class", "diminished-devicon");
-    			add_location(img, file, 160, 7, 6245);
+    			add_location(img, file, 160, 7, 6242);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -571,7 +571,7 @@ var app = (function () {
     	return block;
     }
 
-    // (175:7) {#each project.buttons as button}
+    // (175:28) {#each project.buttons as button}
     function create_each_block_2(ctx) {
     	let a;
     	let i;
@@ -583,9 +583,9 @@ var app = (function () {
     			a = element("a");
     			i = element("i");
     			attr_dev(i, "class", i_class_value = /*button*/ ctx[18].svg);
-    			add_location(i, file, 175, 33, 7089);
+    			add_location(i, file, 175, 33, 7107);
     			attr_dev(a, "href", a_href_value = /*button*/ ctx[18].href);
-    			add_location(a, file, 175, 11, 7067);
+    			add_location(a, file, 175, 11, 7085);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -609,7 +609,7 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(175:7) {#each project.buttons as button}",
+    		source: "(175:28) {#each project.buttons as button}",
     		ctx
     	});
 
@@ -627,7 +627,7 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "lang");
-    			add_location(p, file, 185, 13, 7447);
+    			add_location(p, file, 185, 13, 7465);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -720,24 +720,24 @@ var app = (function () {
 
     			t7 = space();
     			attr_dev(i0, "class", "far fa-folder-open fa-2x");
-    			add_location(i0, file, 171, 24, 6831);
+    			add_location(i0, file, 171, 24, 6828);
     			attr_dev(i1, "class", "fas fa-external-link-alt");
-    			add_location(i1, file, 173, 51, 6973);
+    			add_location(i1, file, 173, 51, 6970);
     			attr_dev(a, "href", a_href_value = /*project*/ ctx[12].link);
-    			add_location(a, file, 173, 28, 6950);
+    			add_location(a, file, 173, 28, 6947);
     			set_style(span0, "float", "right");
-    			add_location(span0, file, 172, 24, 6893);
+    			add_location(span0, file, 172, 24, 6890);
     			attr_dev(div0, "class", "svg-row");
-    			add_location(div0, file, 170, 20, 6785);
-    			add_location(h2, file, 180, 20, 7212);
+    			add_location(div0, file, 170, 20, 6782);
+    			add_location(h2, file, 180, 20, 7230);
     			attr_dev(p, "class", "description");
-    			add_location(p, file, 181, 20, 7256);
+    			add_location(p, file, 181, 20, 7274);
     			set_style(span1, "display", "inline-block");
     			set_style(span1, "margin-left", "-2px");
     			set_style(span1, "margin-bottom", "-10px");
-    			add_location(span1, file, 183, 5, 7311);
+    			add_location(span1, file, 183, 5, 7329);
     			attr_dev(div1, "class", "project-card opacity-0");
-    			add_location(div1, file, 169, 7, 6728);
+    			add_location(div1, file, 169, 7, 6725);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1068,89 +1068,89 @@ var app = (function () {
     			div15 = element("div");
     			div15.textContent = "© Scientific-Guy 2021";
     			attr_dev(div0, "class", "background");
-    			add_location(div0, file, 109, 0, 4265);
-    			add_location(h2, file, 112, 38, 4401);
+    			add_location(div0, file, 109, 0, 4262);
+    			add_location(h2, file, 112, 38, 4398);
     			set_style(span0, "display", "inline-block");
-    			add_location(span0, file, 112, 1, 4364);
-    			add_location(button0, file, 114, 2, 4458);
-    			add_location(button1, file, 115, 2, 4548);
-    			add_location(button2, file, 116, 2, 4618);
+    			add_location(span0, file, 112, 1, 4361);
+    			add_location(button0, file, 114, 2, 4455);
+    			add_location(button1, file, 115, 2, 4545);
+    			add_location(button2, file, 116, 2, 4615);
     			attr_dev(span1, "class", "buttons");
-    			add_location(span1, file, 113, 1, 4433);
+    			add_location(span1, file, 113, 1, 4430);
     			attr_dev(div1, "class", div1_class_value = `header ${/*scrolledHeader*/ ctx[2] ? 'scrolled-header' : ''}`);
-    			add_location(div1, file, 111, 0, 4297);
-    			add_location(h1, file, 122, 2, 4753);
-    			add_location(p0, file, 123, 2, 4779);
-    			add_location(p1, file, 124, 2, 4796);
+    			add_location(div1, file, 111, 0, 4294);
+    			add_location(h1, file, 122, 2, 4750);
+    			add_location(p0, file, 123, 2, 4776);
+    			add_location(p1, file, 124, 2, 4793);
     			attr_dev(div2, "class", "content");
-    			add_location(div2, file, 121, 1, 4729);
+    			add_location(div2, file, 121, 1, 4726);
     			attr_dev(div3, "class", "socialcards");
-    			add_location(div3, file, 127, 1, 4997);
+    			add_location(div3, file, 127, 1, 4994);
     			attr_dev(div4, "class", "cover");
-    			add_location(div4, file, 120, 0, 4708);
-    			add_location(span2, file, 138, 36, 5340);
+    			add_location(div4, file, 120, 0, 4705);
+    			add_location(span2, file, 138, 36, 5337);
     			attr_dev(span3, "class", "section-title");
-    			add_location(span3, file, 138, 8, 5312);
+    			add_location(span3, file, 138, 8, 5309);
     			attr_dev(img0, "class", "pfp");
     			if (!src_url_equal(img0.src, img0_src_value = "/branding96.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Scientific Guy");
-    			add_location(img0, file, 141, 9, 5429);
-    			add_location(div5, file, 141, 4, 5424);
-    			add_location(div6, file, 140, 3, 5414);
-    			add_location(span4, file, 145, 4, 5520);
-    			add_location(br0, file, 145, 61, 5577);
-    			add_location(span5, file, 146, 4, 5587);
-    			add_location(br1, file, 146, 50, 5633);
-    			add_location(span6, file, 147, 4, 5643);
-    			add_location(br2, file, 147, 41, 5680);
-    			add_location(span7, file, 148, 4, 5690);
+    			add_location(img0, file, 141, 9, 5426);
+    			add_location(div5, file, 141, 4, 5421);
+    			add_location(div6, file, 140, 3, 5411);
+    			add_location(span4, file, 145, 4, 5517);
+    			add_location(br0, file, 145, 61, 5574);
+    			add_location(span5, file, 146, 4, 5584);
+    			add_location(br1, file, 146, 50, 5630);
+    			add_location(span6, file, 147, 4, 5640);
+    			add_location(br2, file, 147, 41, 5677);
+    			add_location(span7, file, 148, 4, 5687);
     			attr_dev(img1, "class", "in-flag");
     			if (!src_url_equal(img1.src, img1_src_value = "https://lipis.github.io/flag-icon-css/flags/4x3/in.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Indian Flag");
-    			add_location(img1, file, 148, 28, 5714);
-    			add_location(br3, file, 148, 134, 5820);
-    			add_location(span8, file, 149, 4, 5830);
-    			add_location(br4, file, 149, 66, 5892);
-    			add_location(br5, file, 149, 71, 5897);
+    			add_location(img1, file, 148, 28, 5711);
+    			add_location(br3, file, 148, 134, 5817);
+    			add_location(span8, file, 149, 4, 5827);
+    			add_location(br4, file, 149, 66, 5889);
+    			add_location(br5, file, 149, 71, 5894);
     			attr_dev(p2, "id", "abt-content");
     			set_style(p2, "display", "inline-block");
     			set_style(p2, "margin", "0");
-    			add_location(p2, file, 151, 4, 5908);
-    			add_location(div7, file, 144, 3, 5510);
+    			add_location(p2, file, 151, 4, 5905);
+    			add_location(div7, file, 144, 3, 5507);
     			attr_dev(div8, "class", "section-content");
-    			add_location(div8, file, 139, 8, 5381);
+    			add_location(div8, file, 139, 8, 5378);
     			attr_dev(div9, "class", "section abt-me");
     			attr_dev(div9, "id", "abt-me");
-    			add_location(div9, file, 137, 1, 5263);
-    			add_location(span9, file, 157, 36, 6106);
+    			add_location(div9, file, 137, 1, 5260);
+    			add_location(span9, file, 157, 36, 6103);
     			attr_dev(span10, "class", "section-title");
-    			add_location(span10, file, 157, 8, 6078);
+    			add_location(span10, file, 157, 8, 6075);
     			attr_dev(div10, "class", "section-content");
     			set_style(div10, "margin-top", "10px");
-    			add_location(div10, file, 158, 8, 6154);
+    			add_location(div10, file, 158, 8, 6151);
     			attr_dev(div11, "class", "section wdik");
     			set_style(div11, "margin-top", "20px");
     			attr_dev(div11, "id", "wdik");
-    			add_location(div11, file, 156, 1, 6007);
-    			add_location(span11, file, 166, 36, 6593);
+    			add_location(div11, file, 156, 1, 6004);
+    			add_location(span11, file, 166, 36, 6590);
     			attr_dev(span12, "class", "section-title");
-    			add_location(span12, file, 166, 8, 6565);
+    			add_location(span12, file, 166, 8, 6562);
     			attr_dev(div12, "class", "section-content");
     			set_style(div12, "margin-top", "10px");
-    			add_location(div12, file, 167, 8, 6634);
+    			add_location(div12, file, 167, 8, 6631);
     			set_style(p3, "font-family", "Changa");
     			set_style(p3, "color", "white");
     			set_style(p3, "font-size", "18px");
     			set_style(p3, "cursor", "pointer");
-    			add_location(p3, file, 192, 2, 7554);
+    			add_location(p3, file, 192, 2, 7572);
     			attr_dev(div13, "class", "section projects");
     			set_style(div13, "margin-top", "20px");
     			attr_dev(div13, "id", "projects");
-    			add_location(div13, file, 165, 1, 6486);
+    			add_location(div13, file, 165, 1, 6483);
     			attr_dev(div14, "class", "rest-body");
-    			add_location(div14, file, 136, 0, 5238);
+    			add_location(div14, file, 136, 0, 5235);
     			attr_dev(div15, "class", "footer");
-    			add_location(div15, file, 201, 0, 7822);
+    			add_location(div15, file, 201, 0, 7840);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1580,4 +1580,3 @@ var app = (function () {
     return main;
 
 }());
-//# sourceMappingURL=bundle.js.map

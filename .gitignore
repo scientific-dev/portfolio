@@ -1,5 +1,5 @@
 /node_modules/
 package-lock.json
 global.css.pretty
-/public/build/
+/public/build/*
 .DS_Store

@@ -139,7 +139,7 @@
         <span class="section-title"><span>01.</span> About me</span>
         <div class="section-content">
 			<div>
-				<div><img class="pfp" src="https://github.com/Scientific-Guy/portfolio/blob/gh-pages/branding96.png?raw=true" alt="Scientific Guy"></div>
+				<div><img class="pfp" src="/branding96.png?" alt="Scientific Guy"></div>
 			</div>
 
 			<div>

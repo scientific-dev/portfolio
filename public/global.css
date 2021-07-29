@@ -96,7 +96,7 @@ body {
     width: 100vw;
 	height: 100vh;
     background-color: #282b30;
-    background-image: url(/scenary.jpg);
+    background-image: url(https://github.com/Scientific-Guy/portfolio/blob/gh-pages/scenary.jpg?raw=true);
     background-blend-mode: multiply;
     background-position: 10% 20%;
 }

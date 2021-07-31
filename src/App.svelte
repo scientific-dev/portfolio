@@ -1,202 +1,189 @@
 <script>
-	import { afterUpdate } from 'svelte';
-	import Projects from './projects';
+	import { SocialLinks, ThingsIKnow, Projects } from './constants';
 
-	const ABOUT_ME_CONTENT = 'I started programming and making web apps in 2018 with python then learnt Node.js and Typescript then slowly started learning web frameworks such as React, Next.js, Svelte and then programming languages such as Rust, Golang, etc!\nI love making web apps so i always work on web application projects! I rarely make softwares and mobile apps. I animate and draw when i am at the peak of my boredom.';
-	const TITLES = ['A Developer', 'An Animator', ' A Youtuber'];
-	const DEVICONS = ['rust-plain', 'go-original', 'javascript-plain', 'python-original', 'html5-original', 'css3-original', 'bash-original'];
-	const SOCIAL_LINKS = [
-		{ name: 'youtube', url: 'https://www.youtube.com/channel/UCu6B4Z62fiCT_mwwHlc84iQ', color: 'ff0000' },
-		{ name: 'github', url: 'https://github.com/Scientific-Guy', color: '211f1f' },
-		{ name: 'twitter', url: 'https://twitter.com/ScientificDev', color: '1da1f2' },
-		{ name: 'discord', url: 'https://discord.gg/FrduEZd', color: '7298da' }
-	];
-
-	let projects = Projects.slice(0, 6);
-	let title = 'A Developer';
 	let scrolledHeader = false;
-	let elementState = { 
-		projectCards: [], 
-		aboutContentViewed: false,
-		wdikContentViewed: false
-	};
+	let displayAbout = false;
+	let displayProjects = false;
 
-	afterUpdate(() => {
-		elementState.projectCards = document.querySelectorAll('.opacity-0');
-		checkProjectCardAnimation();
-	});
+	Element.prototype.inViewport = function () {
+		var { top, bottom } = this.getBoundingClientRect();
+		var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+		return top - windowHeight <= 0 && bottom - windowHeight <= 0;
+	}
 
-	function scrollNavigationHandler(id) {
-		return () => {
-			let top = (document.getElementById(id).getBoundingClientRect().top - document.body.getBoundingClientRect().top) - 100;
-			window.scrollTo({ top, behavior: 'smooth' });
-		};
+	Element.prototype.hasPartInViewport = function () {
+		var { top, height } = this.getBoundingClientRect();
+		var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+		return (top <= windowHeight) && ((top + height) >= 0);
 	}
 
 	function sleep(ms) {
 		return new Promise(r => setTimeout(r, ms));
 	}
 
-	function checkProjectCardAnimation() {
-		for (var i = 0; i < elementState.projectCards.length; i++) {
-			var element = elementState.projectCards[i];
-			var { top, bottom } = element.getBoundingClientRect();
-			if (top - window.innerHeight <= 0 && bottom - window.innerHeight <= 0) 
-			    element.classList.remove('opacity-0')
-		}
+	function scrollNavigationHandler(id) {
+		return () => {
+			let top = (document.getElementById(id).getBoundingClientRect().top - document.body.getBoundingClientRect().top);
+			window.scrollTo({ top, behavior: 'smooth' });
+		};
 	}
 
-	async function checkAboutContentAnimation() {
-		if (!elementState.aboutContentViewed) {
-			var aboutContentElement = document.getElementById('abt-content');
-			var { top, bottom } = aboutContentElement.getBoundingClientRect();
-
-			if (top - window.innerHeight <= 0 && bottom - window.innerHeight <= 0) {
-				elementState.aboutContentViewed = true;
-				const write = async (content) => {
-			        let characters = content.split('');
-					for (let i = 0; i < characters.length; i++) {
-	        		    await sleep(50);
-	     	    	    aboutContentElement.innerHTML += characters[i];
-		        	}
-		        };
-
-		        await write(ABOUT_ME_CONTENT);
-		        aboutContentElement.innerHTML += '<br/><br/><span>Warning: </span>';
-		        await write('The avatar which is been used here is made by me so kindly contact me before using it.');
-			}
-		}
-	}
-
-	async function checkWDIKContentAnimation() {
-		if (!elementState.wdikContentViewed) {
-			var wdikContentElement = document.getElementById('wdik');
-			var { top, bottom } = wdikContentElement.getBoundingClientRect();
-			if (top - window.innerHeight <= 0 && bottom - window.innerHeight <= 0) {
-				elementState.wdikContentViewed = true;
-				
-				var deviconElements = document.querySelectorAll('.wdik img');
-				for (let i = 0; i < deviconElements.length; i++) {
-					await sleep(250);
-					deviconElements[i].classList.remove('diminished-devicon');
-				}
-			}
-		}
-	}
-
-	window.addEventListener('load', () => {
+	function checkHeaderScrolled() {
 		const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 		scrolledHeader = scrolled > 20;
-	});
+	}
 
-	window.addEventListener('resize', () => {
-		elementState.projectCards = document.querySelectorAll('.project-card');
-		checkProjectCardAnimation();
-		checkAboutContentAnimation();
-		checkWDIKContentAnimation();
+	async function checkSections() {
+		if (!displayAbout && document.getElementById('about').inViewport()) displayAbout = true;
+		if (!displayProjects && document.getElementById('projects').hasPartInViewport()) displayProjects = true;
+
+		let projectCardElements = document.querySelectorAll('.pre-project-card');
+		for (let i = 0; i < projectCardElements.length; i++) {
+			if (projectCardElements[i].inViewport()) {
+				projectCardElements[i].classList.remove('pre-project-card');
+				await sleep(1000);
+			}
+		}
+	}
+
+	async function animateIntroPage() {
+		let intoContentElements = document.querySelectorAll('.pre-intro-content');
+		for (let i = 0; i < intoContentElements.length; i++) {
+			await sleep(200);
+			intoContentElements[i].classList.remove('pre-intro-content');
+		}
+
+		await sleep(600);
+		let socialCardElements = document.querySelectorAll('.pre-socialcard');
+		for (let i = 0; i < socialCardElements.length; i++) {
+			await sleep(200);
+			socialCardElements[i].classList.remove('pre-socialcard');
+		}
+	}
+
+	window.addEventListener('load', async () => {
+		let headerContentElements = document.querySelectorAll('.pre-header-content');
+		for (let i = headerContentElements.length - 1; i >= 0; i--) {
+			headerContentElements[i].classList.remove('pre-header-content');
+			await sleep(200);
+		}
+
+		animateIntroPage();
+		checkSections();
+		checkHeaderScrolled();
 	});
 
 	window.addEventListener('scroll', () => {
-		const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-		scrolledHeader = scrolled > 20;
-		checkProjectCardAnimation();
-		checkAboutContentAnimation();
-		checkWDIKContentAnimation();
+		checkSections();
+		checkHeaderScrolled();
 	});
 
-	setInterval(() => title = TITLES[Math.floor(Math.random() * TITLES.length)], 50000);
+	window.addEventListener('resize', () => {
+		checkSections();
+		checkHeaderScrolled();
+	});
 </script>
 
 <div class="background"></div>
 
 <div class={`header ${scrolledHeader ? 'scrolled-header' : ''}`}>
-	<span style="display: inline-block;"><h2>Scientific Guy</h2></span>
+	<span class="pre-header-content" style="display: inline-block;"><h2>Scientific Guy</h2></span>
 	<span class="buttons">
-		<button on:click={() => window.scrollTo({ top: 0, behaviour: 'smooth' })}>Home</button>
-		<button on:click={scrollNavigationHandler('abt-me')}>About</button>
-		<button on:click={scrollNavigationHandler('projects')}>Projects</button>
+		<button class="pre-header-content" on:click={() => window.scrollTo({ top: 0, behaviour: 'smooth' })}>Home</button>
+		<button class="pre-header-content" on:click={scrollNavigationHandler('about')}>About</button>
+		<button class="pre-header-content" on:click={scrollNavigationHandler('projects')}>Projects</button>
 	</span>
 </div>
 
-<div class="cover">
+<div class="intro" id="intro">
 	<div class="content">
-		<h1>Scientific Guy</h1>
-		<p>{title}</p>
-		<p>I am a high school student who likes to do programming and stuff. I am a full stack developer and I mostly build user interfaces with the prominent programming language as Javascript.</p>
+		<h1 class="pre-intro-content">Scientific Guy</h1>
+	    <h2 class="pre-intro-content">Yet Another Random Developer</h2>
+	    <p class="pre-intro-content">I am a high school student who likes to do programming and stuff. I am a full stack developer and i mostly build user interfaces with the prominent programming language as Javascript.</p>
 	</div>
 
 	<div class="socialcards">
-		{#each SOCIAL_LINKS as link}
-		    <a style={`background-color: #${link.color};`} class={`socialcard social-${link.name}`} href={link.url}>
+		{#each SocialLinks as link}
+		    <a style={`--color: #${link.color};`} class={`pre-socialcard socialcard social-${link.name}`} href={link.url}>
 				<i class={`fab fa-${link.name}`}/>
 			</a>
 		{/each}
 	</div>
 </div>
 
-<div class="rest-body">
-	<div class="section abt-me" id="abt-me">
-        <span class="section-title"><span>01.</span> About me</span>
-        <div class="section-content">
-			<div>
-				<div><img class="pfp" src="/branding96.png" alt="Scientific Guy"></div>
+<div class="about" id="about">
+	{#if displayAbout}
+	    <div class="section-inner">
+			<h1 class="section-title"><span>01.</span> About me</h1>
+			<div class="about-flex">
+				<div>
+					<div style="padding-right: 20px;">
+						<div class="pfp"></div>
+					</div>
+				</div>
+				<div class="text">
+					Hi. I am a full stack web developer with <strong>Scientific Guy</strong> as my internet username.<br/><br/>
+					I am a high school student from <strong>India</strong> who started programming with <strong>Python</strong> in <strong>2018</strong> then consequently started with web development with <strong>Javascript</strong> and then started to learn programming languages such as 
+					<strong>Golang</strong>, <strong>Rust</strong> and learning more. And i draw and animate rarely and one of the creation is my avatar.<br/><br/>
+					Things i know:<br/>
+
+					<div style="display: flex; flex-wrap: wrap; margin-top: 6px;">
+						{#each ThingsIKnow as thing}
+					        <img 
+							    src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${thing[0]}/${thing[0]}-${thing[1]}.svg`} 
+								draggable="false" 
+								alt={thing[0]} 
+								width="30" 
+								height="30" 
+								style="cursor: pointer;"
+							/>
+						{/each}
+					</div>
+
+					<div style="height: 80px;"></div>
+				</div>
 			</div>
+		</div>
+	{/if}
+</div>
 
-			<div>
-				<span>Name: </span> Scientific Guy (Not real name though)<br/>
-				<span>Mail: </span> scientificguy007@gmail.com<br/>
-				<span>Aka: </span> NO U, Science Spot<br/>
-				<span>Location: </span> <img class="in-flag" src="https://lipis.github.io/flag-icon-css/flags/4x3/in.svg" alt="Indian Flag"> India<br/>
-				<span>Favourite Languages: </span> Javascript, Rust and Golang<br/><br/>
+<div class="projects" id="projects">
+	{#if displayProjects}
+	    <div class="section-inner">
+			<h1 class="section-title"><span>02.</span> Projects</h1>
+			<div class="project-list">
+				{#each Projects as project}
+					<div class="project-card pre-project-card">
+						<header>
+							<div class="title">
+								<i class="far fa-folder-open fa-2x"/>
+								<h3>{project.name}</h3>
+							</div>
 
-				<p id="abt-content" style="display: inline-block; margin: 0;"></p>
+							<p class="description">{project.description}</p>
+							<div style="height: 10px;"></div>
+						</header>
+
+						<footer>
+							<span class="languages">
+								{#each project.languages as language}
+									<p>{language}</p>
+								{/each}
+							</span>
+
+							<span class="svg-links">
+								{#each project.buttons as button}
+								    <a href={button.href}>
+										<i class={button.svg}/>
+									</a>
+								{/each}
+							</span>
+						</footer>
+					</div>
+			    {/each}
 			</div>
 		</div>
-    </div>
-
-	<div class="section wdik" style="margin-top: 20px;" id="wdik">
-        <span class="section-title"><span>02.</span> What do i know?</span>
-        <div class="section-content" style="margin-top: 10px;">
-			{#each DEVICONS as icon}
-			    <img src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${icon.split('-')[0]}/${icon}.svg`} alt={icon.split('-')[0]} draggable="false" style="cursor: pointer;" class="diminished-devicon"/>
-			{/each}
-		</div>
-    </div>
-
-	<div class="section projects" style="margin-top: 20px;" id="projects">
-        <span class="section-title"><span>03.</span> Projects</span>
-        <div class="section-content" style="margin-top: 10px;">
-			{#each projects as project}
-			    <div class="project-card opacity-0">
-                    <div class="svg-row">
-                        <i class="far fa-folder-open fa-2x"/>
-                        <span style="float: right;">
-                            <a href={project.link}><i class="fas fa-external-link-alt"/></a>
-                            {#each project.buttons as button}
-							    <a href={button.href}><i class={button.svg}/></a>
-							{/each}
-                        </span>
-                    </div>
-
-                    <h2>{project.name}</h2>
-                    <p class="description">{project.description}</p>
-
-					<span style="display: inline-block; margin-left: -2px; margin-bottom: -10px;">
-						{#each project.languages as language}
-					        <p class="lang">{language}</p>
-				    	{/each}
-					</span>
-                </div>
-			{/each}
-		</div>
-
-		<p 
-		    style="font-family: Changa; color: white; font-size: 18px; cursor: pointer;"
-		    on:click={() => projects = projects.length <= 6 ? Projects : Projects.slice(0, 6)}
-		>
-		    Show {projects.length <= 6 ? 'more' : 'less'} projects?
-		</p>
-    </div>
+	{/if}
 </div>
 
 <div class="footer">© Scientific-Guy 2021</div>

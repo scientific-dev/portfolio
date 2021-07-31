@@ -13,9 +13,8 @@
 
 	Element.prototype.hasPartInViewport = function () {
 		var { top, height } = this.getBoundingClientRect();
-		var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-		return (top <= windowHeight) && ((top + height) >= 0);
-	}
+		return (top + (height / 3)) <= (window.innerHeight || document.documentElement.clientHeight);
+	} 
 
 	function sleep(ms) {
 		return new Promise(r => setTimeout(r, ms));

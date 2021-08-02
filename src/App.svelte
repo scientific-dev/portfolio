@@ -33,7 +33,7 @@
 	}
 
 	async function checkSections() {
-		if (!displayAbout && document.getElementById('about').inViewport()) displayAbout = true;
+		if (!displayAbout && document.getElementById('about').hasPartInViewport()) displayAbout = true;
 		if (!displayProjects && document.getElementById('projects').hasPartInViewport()) displayProjects = true;
 
 		let projectCardElements = document.querySelectorAll('.pre-project-card');

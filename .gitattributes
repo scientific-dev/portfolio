@@ -1,1 +1,1 @@
-src/* linguist-language=Svelte text=auto eol=lf
+*.html linguist-language=Svelte text=auto eol=lf

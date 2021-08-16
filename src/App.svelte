@@ -86,7 +86,7 @@
 <div class="background"></div>
 
 <div class={`header ${scrolledHeader ? 'scrolled-header' : ''}`}>
-	<span class="pre-header-content" style="display: inline-block;"><h2>Scientific Guy</h2></span>
+	<span class="pre-header-content" style="display: inline-block;"><h2>Scientific Dev</h2></span>
 	<span class="buttons">
 		<button class="pre-header-content" on:click={() => window.scrollTo({ top: 0, behaviour: 'smooth' })}>Home</button>
 		<button class="pre-header-content" on:click={scrollNavigationHandler('about')}>About</button>
@@ -96,7 +96,7 @@
 
 <div class="intro" id="intro">
 	<div class="content">
-		<h1 class="pre-intro-content">Scientific Guy</h1>
+		<h1 class="pre-intro-content">Scientific Dev</h1>
 	    <h2 class="pre-intro-content">Yet Another Random Developer</h2>
 	    <p class="pre-intro-content">I am a high school student who likes to do programming and stuff. I am a full stack developer and i mostly build user interfaces with the prominent programming language as Javascript.</p>
 	</div>
@@ -121,7 +121,7 @@
 					</div>
 				</div>
 				<div class="text">
-					Hi. I am a full stack web developer with <strong>Scientific Guy</strong> as my internet username.<br/><br/>
+					Hi. I am a full stack web developer with <strong>Scientific Dev</strong> as my internet username.<br/><br/>
 					I am a high school student from <strong>India</strong> who started programming with <strong>Python</strong> in <strong>2018</strong> then consequently started with web development with <strong>Javascript</strong> and then started to learn programming languages such as 
 					<strong>Golang</strong>, <strong>Rust</strong> and learning more. And i draw and animate rarely and one of the creation is my avatar.<br/><br/>
 					Things i know:<br/>
@@ -185,4 +185,4 @@
 	{/if}
 </div>
 
-<div class="footer">© Scientific-Guy 2021</div>
+<div class="footer">© Scientific-Dev 2021</div>

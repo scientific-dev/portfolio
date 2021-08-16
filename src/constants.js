@@ -14,7 +14,7 @@ export const ThingsIKnow = [['javascript', 'plain'], ['go', 'original'], ['pytho
 
 export const SocialLinks = [
     { name: 'youtube', url: 'https://www.youtube.com/channel/UCu6B4Z62fiCT_mwwHlc84iQ', color: 'ff0000' },
-    { name: 'github', url: 'https://github.com/Scientific-Guy', color: '211f1f' },
+    { name: 'github', url: 'https://github.com/Scientific-Dev', color: '211f1f' },
     { name: 'twitter', url: 'https://twitter.com/ScientificDev', color: '1da1f2' },
     { name: 'discord', url: 'https://discord.gg/FrduEZd', color: '7298da' }
 ];
@@ -36,7 +36,7 @@ export const Projects = [
         languages: ['Javascript'],
         link: 'https://npmjs.com/package/enhanced.db',
         buttons: [
-            makeBtn('https://github.com/Scientific-Guy/enhanced.db', 'GitHub'),
+            makeBtn('https://github.com/Scientific-Dev/enhanced.db', 'GitHub'),
             makeBtn('https://npmjs.com/package/enhanced.db', 'Link')
         ]
     },
@@ -46,7 +46,7 @@ export const Projects = [
         languages: ['React', 'Next.js', 'Javascript'],
         link: 'https://npmjs.com/package/instant.db',
         buttons: [
-            makeBtn('https://github.com/Scientific-Guy/instant.db', 'GitHub'),
+            makeBtn('https://github.com/Scientific-Dev/instant.db', 'GitHub'),
             makeBtn('https://npmjs.com/package/instant.db', 'Link')
         ]
     },
@@ -64,18 +64,18 @@ export const Projects = [
         name: 'Templatify',
         description: 'A cli to create local templates and copy templates from github which is saved within your pc and used easily!',
         languages: ['Go'],
-        link: 'https://github.com/Scientific-Guy/templatify',
+        link: 'https://github.com/Scientific-Dev/templatify',
         buttons: [
-            makeBtn('https://github.com/Scientific-Guy/templatify', 'GitHub')
+            makeBtn('https://github.com/Scientific-Dev/templatify', 'GitHub')
         ]
     },
     {
         name: 'EvtManager',
         description: 'Simple to use eventemitter to manage your events synchronously and asynchronously too for Deno, Node and browser with a typesafe environment!',
-        link: 'https://github.com/scientific-guy/evtmanager',
+        link: 'https://github.com/scientific-dev/evtmanager',
         languages: ['Javascript', 'Typescript'],
         buttons: [
-            makeBtn('https://github.com/scientific-guy/evtmanager', 'GitHub'),
+            makeBtn('https://github.com/scientific-dev/evtmanager', 'GitHub'),
             makeBtn('https://npmjs.com/package/evtmanager', 'NPM'),
             makeBtn('https://deno.land/x/evtmanager', 'Deno')
         ]
@@ -84,19 +84,19 @@ export const Projects = [
         name: 'Emoji Canvas',
         description: 'An easy to use module to write text with parsed emojis (supports discord emojis too) in canvas for deno!',
         languages: ['Javascript', 'Typescript'],
-        link: 'https://github.com/Scientific-Guy/emoji-canvas',
+        link: 'https://github.com/Scientific-Dev/emoji-canvas',
         buttons: [
-            makeBtn('https://github.com/Scientific-Guy/emoji-canvas', 'GitHub'),
+            makeBtn('https://github.com/Scientific-Dev/emoji-canvas', 'GitHub'),
             makeBtn('deno.land/x/emoji_canvas', 'Deno')
         ]
     },
     {
         name: 'Deno Headers Socket',
         description: 'A custom socket for deno to add custom headers which lacks in the standard library!',
-        link: 'https://github.com/scientific-guy/custom-socket',
+        link: 'https://github.com/scientific-dev/custom-socket',
         languages: ['Javascript', 'Typescript'],
         buttons: [
-            makeBtn('https://github.com/scientific-guy/custom-socket', 'GitHub'),
+            makeBtn('https://github.com/scientific-dev/custom-socket', 'GitHub'),
             makeBtn('https://deno.land/x/custom_socket', 'Deno')
         ]
     }

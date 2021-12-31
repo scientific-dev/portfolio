@@ -51,13 +51,12 @@ export const Projects = [
         ]
     },
     {
-        name: 'Listcord',
-        description: 'Listcord is a discord botlist with a clean environment with many features with 100+ bots!',
-        languages: ['React', 'Next.js', 'Javascript'],
-        link: 'https://listcord.gg',
+        name: 'TimelineOfIndia',
+        description: 'Timeline of India is a website which shows the events from the very first of the Indus civilization of the Indian subcontinent to the current state of the Indian subcontinent.',
+        languages: ['Svelte', 'Javascript'],
+        link: 'https://timelineofindia.github.io',
         buttons: [
-            makeBtn('https://github.com/listcordteam', 'GitHub'),
-            makeBtn('https://listcord.gg', 'Link')
+            makeBtn('https://github.com/timelineofindia', 'GitHub')
         ]
     },
     {

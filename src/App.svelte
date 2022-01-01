@@ -98,7 +98,7 @@
 	<div class="content">
 		<h1 class="pre-intro-content">TheSudarsanDev</h1>
 		<h2 class="pre-intro-content">Yet Another Random Developer</h2>
-		<p class="pre-intro-content">I am a high school student who likes to do programming and stuff. I am a full stack developer and i mostly build user interfaces with the prominent programming language as Javascript.</p>
+		<p class="pre-intro-content">I'm Sudarsan, a high school student who likes to do programming and stuff. I am a full stack developer and i mostly build user interfaces with the prominent programming language as Javascript.</p>
 	</div> 
 
 	<div class="socialcards">

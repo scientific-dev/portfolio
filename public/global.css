@@ -1,6 +1,6 @@
-:root{
-    --cyan: #64ffda;
-    --light-grey: #424549;
+:root {
+	--cyan: #64ffda;
+	--light-grey: #424549;
 	--lighter-blue: #57bfff;
 	--blue: #1da1f2;
 	--project-color: #102230;
@@ -9,7 +9,7 @@
 }
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth;    
 }
 
 body {
@@ -17,32 +17,32 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
+	width: 7px;
 }
   
 ::-webkit-scrollbar-track {
-    background: #18181d;
+	background: #18181d;
 }
   
 ::-webkit-scrollbar-thumb {
-    background: #6580b1;
+	background: #6580b1;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #7298da;
+	background: #7298da;
 }
 
 .background {
 	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+	top: 0;
+	left: 0;
+	width: 100vw;
 	height: 100vh;
-    background-color: #252931;
-    background-image: url(/scenary.jpg);
+	background-color: #252931;
+	background-image: url(/scenary.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-    background-blend-mode: multiply;
+	background-blend-mode: multiply;
 }
 
 .header {
@@ -98,9 +98,9 @@ body {
 
 .pre-header-content {
 	-webkit-transform: translateY(calc(-100% - 20px));
-    -moz-transform: translateY(calc(-100% - 20px));
-    -ms-transform: translateY(calc(-100% - 20px));
-    -o-transform: translateY(calc(-100% - 20px));
+	-moz-transform: translateY(calc(-100% - 20px));
+	-ms-transform: translateY(calc(-100% - 20px));
+	-o-transform: translateY(calc(-100% - 20px));
 	transform: translateY(calc(-100% - 20px));
 	opacity: 0;
 }
@@ -146,19 +146,19 @@ body {
 
 .pre-intro-content {
 	-webkit-transform: translateY(calc(100% + 20px));
-    -moz-transform: translateY(calc(100% + 20px));
-    -ms-transform: translateY(calc(100% + 20px));
-    -o-transform: translateY(calc(100% + 20px));
-    transform: translateY(calc(100% + 20px));
+	-moz-transform: translateY(calc(100% + 20px));
+	-ms-transform: translateY(calc(100% + 20px));
+	-o-transform: translateY(calc(100% + 20px));
+	transform: translateY(calc(100% + 20px));
 	opacity: 0!important;
 }
 
 .pre-socialcard {
 	-webkit-transform: rotate(520deg);
-    -moz-transform: rotate(520deg);
-    -ms-transform: rotate(520deg);
-    -o-transform: rotate(520deg);
-    transform: rotate(520deg);
+	-moz-transform: rotate(520deg);
+	-ms-transform: rotate(520deg);
+	-o-transform: rotate(520deg);
+	transform: rotate(520deg);
 	opacity: 0!important;
 }
 
@@ -168,10 +168,10 @@ body {
 
 .socialcard {
 	color: white;
-    border-radius: 100%;
+	border-radius: 100%;
 	width: 40px;
 	height: 40px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 	text-decoration: none;
 	cursor: pointer;
 	display: inline-block;
@@ -294,10 +294,10 @@ body {
 	margin: auto;
 	animation: section-animation 1s forwards;
 	-webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    transform: translateY(100px);
+	-moz-transform: translateY(100px);
+	-ms-transform: translateY(100px);
+	-o-transform: translateY(100px);
+	transform: translateY(100px);
 	opacity: 0;
 }
 
@@ -371,10 +371,10 @@ body {
 
 .pre-project-card {
 	-webkit-transform: translateY(100px);
-    -moz-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    transform: translateY(100px);
+	-moz-transform: translateY(100px);
+	-ms-transform: translateY(100px);
+	-o-transform: translateY(100px);
+	transform: translateY(100px);
 	opacity: 0;
 }
 
@@ -395,19 +395,19 @@ body {
 @keyframes header-content-animation {
 	0% {
 		-webkit-transform: translateY(calc(-100% - 20px));
-    	-moz-transform: translateY(calc(-100% - 20px));
-    	-ms-transform: translateY(calc(-100% - 20px));
-    	-o-transform: translateY(calc(-100% - 20px));
-	    transform: translateY(calc(-100% - 20px));
+		-moz-transform: translateY(calc(-100% - 20px));
+		-ms-transform: translateY(calc(-100% - 20px));
+		-o-transform: translateY(calc(-100% - 20px));
+		transform: translateY(calc(-100% - 20px));
 		opacity: 0;
 	}
 
 	100% {
 		-webkit-transform: translateY(0);
-    	-moz-transform: translateY(0);
-    	-ms-transform: translateY(0);
-    	-o-transform: translateY(0);
-	    transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 		opacity: 1;
 	}
 }
@@ -415,19 +415,19 @@ body {
 @keyframes section-animation {
 	0% {
 		-webkit-transform: translateY(100px);
-        -moz-transform: translateY(100px);
-        -ms-transform: translateY(100px);
-        -o-transform: translateY(100px);
-	    transform: translateY(100px);
+		-moz-transform: translateY(100px);
+		-ms-transform: translateY(100px);
+		-o-transform: translateY(100px);
+		transform: translateY(100px);
 		opacity: 0;
 	}
 
 	100% {
 		-webkit-transform: translateY(0);
-    	-moz-transform: translateY(0);
-    	-ms-transform: translateY(0);
-    	-o-transform: translateY(0);
-	    transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 		opacity: 1;
 	}
 }
@@ -435,19 +435,19 @@ body {
 @keyframes intro-content-animation {
 	0% {
 		-webkit-transform: translateY(calc(100% + 20px));
-        -moz-transform: translateY(calc(100% + 20px));
-        -ms-transform: translateY(calc(100% + 20px));
-        -o-transform: translateY(calc(100% + 20px));
-	    transform: translateY(calc(100% + 20px));
+		-moz-transform: translateY(calc(100% + 20px));
+		-ms-transform: translateY(calc(100% + 20px));
+		-o-transform: translateY(calc(100% + 20px));
+		transform: translateY(calc(100% + 20px));
 		opacity: 0;
 	}
 
 	100% {
 		-webkit-transform: translateY(0);
-    	-moz-transform: translateY(0);
-    	-ms-transform: translateY(0);
-    	-o-transform: translateY(0);
-	    transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
 		opacity: 1;
 	}
 }
@@ -455,11 +455,11 @@ body {
 @keyframes socialcard-animation {
 	0% {
 		-webkit-transform: rotate(520deg);
-        -moz-transform: rotate(520deg);
-        -ms-transform: rotate(520deg);
-        -o-transform: rotate(520deg);
-        transform: rotate(520deg);
-	    opacity: 0!important;
+		-moz-transform: rotate(520deg);
+		-ms-transform: rotate(520deg);
+		-o-transform: rotate(520deg);
+		transform: rotate(520deg);
+		opacity: 0!important;
 	}
 
 	100% {
@@ -565,7 +565,7 @@ body {
 
 	.project-card .title h3 {
 		margin-top: 16px;
-	    margin-left: 8px;
+		margin-left: 8px;
 	}
 }
 

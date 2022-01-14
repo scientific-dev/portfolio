@@ -103,7 +103,7 @@
 
 	<div class="socialcards">
 		{#each SocialLinks as link}
-		    <a style={`--color: #${link.color};`} class={`pre-socialcard socialcard social-${link.name}`} href={link.url}>
+			<a style={`--color: #${link.color};`} class={`pre-socialcard socialcard social-${link.name}`} href={link.url}>
 				<i class={`fab fa-${link.name}`}/>
 			</a>
 		{/each}
@@ -114,12 +114,14 @@
 	{#if displayAbout}
 	    <div class="section-inner">
 			<h1 class="section-title"><span>01.</span> About me</h1>
+
 			<div class="about-flex">
 				<div>
 					<div style="padding-right: 20px;">
 						<div class="pfp"></div>
 					</div>
 				</div>
+
 				<div class="text">
 					Hi, I'm a <strong>Sudarsan</strong>. I am a full stack web developer with <strong>TheSudarsanDev</strong> as my internet username.<br/><br/>
 					I am a high school student from <strong>India</strong> who started programming with <strong>Python</strong> in <strong>2018</strong> then consequently started with web development with <strong>Javascript</strong> and then started to learn programming languages such as 
@@ -128,8 +130,8 @@
 
 					<div style="display: flex; flex-wrap: wrap; margin-top: 6px;">
 						{#each ThingsIKnow as thing}
-					        <img 
-							    src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${thing[0]}/${thing[0]}-${thing[1]}.svg`} 
+							<img 
+								src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${thing[0]}/${thing[0]}-${thing[1]}.svg`} 
 								draggable="false" 
 								alt={thing[0]} 
 								width="30" 
@@ -172,7 +174,7 @@
 
 							<span class="svg-links">
 								{#each project.buttons as button}
-								    <a href={button.href}>
+									<a href={button.href}>
 										<i class={button.svg}/>
 									</a>
 								{/each}

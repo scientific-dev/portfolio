@@ -85,7 +85,7 @@
 
 <div class="background"></div>
 
-<div class={`header ${scrolledHeader ? 'scrolled-header' : ''}`}>
+<div class="header {scrolledHeader ? 'scrolled-header' : ''}">
 	<span class="pre-header-content" style="display: inline-block;"><h2>TheSudarsanDev</h2></span>
 	<span class="buttons">
 		<button class="pre-header-content" on:click={() => window.scrollTo({ top: 0, behaviour: 'smooth' })}>Home</button>
@@ -103,8 +103,11 @@
 
 	<div class="socialcards">
 		{#each SocialLinks as link}
-			<a style={`--color: #${link.color};`} class={`pre-socialcard socialcard social-${link.name}`} href={link.url}>
-				<i class={`fab fa-${link.name}`}/>
+			<a 
+				style="--color: #{link.color};" 
+				class="pre-socialcard socialcard social-{link.name}" href={link.url}
+			>
+				<i class="fab fa-{link.name}"/>
 			</a>
 		{/each}
 	</div>
@@ -131,7 +134,7 @@
 					<div style="display: flex; flex-wrap: wrap; margin-top: 6px;">
 						{#each ThingsIKnow as thing}
 							<img 
-								src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${thing[0]}/${thing[0]}-${thing[1]}.svg`} 
+								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/{thing[0]}/{thing[0]}-{thing[1]}.svg"
 								draggable="false" 
 								alt={thing[0]} 
 								width="30" 
@@ -187,4 +190,4 @@
 	{/if}
 </div>
 
-<div class="footer">© TheSudarsanDev 2022</div>
+<div class="footer">© TheSudarsanDev {new Date().getFullYear()}</div>

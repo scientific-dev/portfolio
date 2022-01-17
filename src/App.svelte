@@ -1,5 +1,6 @@
 <script>
 	import { SocialLinks, ThingsIKnow, Projects } from './constants';
+	import Project from './Project.svelte';
 
 	let scrolledHeader = false;
 	let displayAbout = false;
@@ -126,7 +127,7 @@
 				</div>
 
 				<div class="text">
-					Hi, I'm a <strong>Sudarsan</strong>. I am a full stack web developer with <strong>TheSudarsanDev</strong> as my internet username.<br/><br/>
+					Hi, I'm <strong>Sudarsan</strong>. I am a full stack web developer with <strong>TheSudarsanDev</strong> (abbrv. The Sudarsan Developer) as my internet username.<br/><br/>
 					I am a high school student from <strong>India</strong> who started programming with <strong>Python</strong> in <strong>2018</strong> then consequently started with web development with <strong>Javascript</strong> and then started to learn programming languages such as 
 					<strong>Golang</strong>, <strong>Rust</strong> and learning more. And i draw and animate rarely and one of the creation is my avatar.<br/><br/>
 					Things i know:<br/>
@@ -157,33 +158,7 @@
 			<h1 class="section-title"><span>02.</span> Projects</h1>
 			<div class="project-list">
 				{#each Projects as project}
-					<div class="project-card pre-project-card">
-						<header>
-							<div class="title">
-								<i class="far fa-folder-open fa-2x"/>
-								<h3>{project.name}</h3>
-							</div>
-
-							<p class="description">{project.description}</p>
-							<div style="height: 10px;"></div>
-						</header>
-
-						<footer>
-							<span class="languages">
-								{#each project.languages as language}
-									<p>{language}</p>
-								{/each}
-							</span>
-
-							<span class="svg-links">
-								{#each project.buttons as button}
-									<a href={button.href}>
-										<i class={button.svg}/>
-									</a>
-								{/each}
-							</span>
-						</footer>
-					</div>
+					<Project project={project}/>
 			    {/each}
 			</div>
 		</div>

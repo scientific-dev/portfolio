@@ -5,9 +5,10 @@
 	import About from './sections/About.svelte';
 	import Projects from './sections/Projects.svelte';
 
+	const SECTIONS = ['about', 'projects'];
+
 	let scrolledHeader = false;
-	let displayAbout = false;
-	let displayProjects = false;
+	let displayStates = { about: false, projects: false };
 
 	Element.prototype.inViewport = function () {
 		var { top, bottom } = this.getBoundingClientRect();
@@ -30,8 +31,11 @@
 	}
 
 	async function checkSections () {
-		if (!displayAbout && document.getElementById('about').hasPartInViewport()) displayAbout = true;
-		if (!displayProjects && document.getElementById('projects').hasPartInViewport()) displayProjects = true;
+		for (let i = 0; i < SECTIONS.length; i++) {
+			let id = SECTIONS[i];
+			if (!displayStates[id] && document.getElementById(id).hasPartInViewport())
+				displayStates = Object.defineProperty(displayStates, id, { value: true });
+		}
 
 		let projectCardElements = document.querySelectorAll('.pre-project-card');
 		for (let i = 0; i < projectCardElements.length; i++) {
@@ -87,7 +91,7 @@
 	i=1
 	id="about"
 	name="About me"
-	display={displayAbout}
+	display={displayStates.about}
 >
 	<About/>
 </Section>
@@ -96,7 +100,7 @@
 	i=2
 	id="projects"
 	name="Projects"
-	display={displayProjects}
+	display={displayStates.projects}
 >
 	<Projects/>
 </Section>

@@ -13,8 +13,8 @@ function makeBtn(href, name){
 export const ThingsIKnow = [['javascript', 'plain'], ['go', 'original'], ['python', 'original'], ['html5', 'original'], ['css3', 'original'], ['rust', 'plain']]
 
 export const SocialLinks = [
-    { name: 'youtube', url: 'https://www.youtube.com/channel/UCu6B4Z62fiCT_mwwHlc84iQ', color: 'ff0000' },
-    { name: 'github', url: 'https://github.com/Scientific-Dev', color: '211f1f' },
+    // { name: 'youtube', url: 'https://www.youtube.com/channel/UCu6B4Z62fiCT_mwwHlc84iQ', color: 'ff0000' },
+    { name: 'github', url: 'https://github.com/scientific-dev', color: '211f1f' },
     { name: 'twitter', url: 'https://twitter.com/ScientificDev', color: '1da1f2' },
     { name: 'discord', url: 'https://discord.gg/FrduEZd', color: '7298da' }
 ];
@@ -43,7 +43,7 @@ export const Projects = [
     {
         name: 'Instant.db',
         description: 'Instant.db helps you to make database instantly using json files for Node.js!',
-        languages: ['React', 'Next.js', 'Javascript'],
+        languages: ['Javascript'],
         link: 'https://npmjs.com/package/instant.db',
         buttons: [
             makeBtn('https://github.com/Scientific-Dev/instant.db', 'GitHub'),
@@ -97,6 +97,15 @@ export const Projects = [
         buttons: [
             makeBtn('https://github.com/scientific-dev/custom-socket', 'GitHub'),
             makeBtn('https://deno.land/x/custom_socket', 'Deno')
+        ]
+    },
+    {
+        name: 'Ludo',
+        description: 'An awesome site to play singleplayer ludo for fun even with bots!',
+        link: 'https://scientific-dev.github.io/ludo?game',
+        languages: ['Svelte', 'Javascript'],
+        buttons: [
+            makeBtn('https://github.com/scientific-dev/ludo', 'GitHub')
         ]
     }
 ];

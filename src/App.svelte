@@ -1,6 +1,9 @@
 <script>
-	import { SocialLinks, ThingsIKnow, Projects } from './constants';
-	import Project from './Project.svelte';
+	import Header from './components/Header.svelte';
+	import Intro from './components/Intro.svelte';
+	import Section from './components/Section.svelte';
+	import About from './sections/About.svelte';
+	import Projects from './sections/Projects.svelte';
 
 	let scrolledHeader = false;
 	let displayAbout = false;
@@ -17,23 +20,16 @@
 		return (top + (height / 3)) <= (window.innerHeight || document.documentElement.clientHeight);
 	} 
 
-	function sleep(ms) {
+	function sleep (ms) {
 		return new Promise(r => setTimeout(r, ms));
 	}
-
-	function scrollNavigationHandler(id) {
-		return () => {
-			let top = (document.getElementById(id).getBoundingClientRect().top - document.body.getBoundingClientRect().top);
-			window.scrollTo({ top, behavior: 'smooth' });
-		};
-	}
-
-	function checkHeaderScrolled() {
+	
+	function headerScrolled () {
 		const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 		scrolledHeader = scrolled > 20;
 	}
 
-	async function checkSections() {
+	async function checkSections () {
 		if (!displayAbout && document.getElementById('about').hasPartInViewport()) displayAbout = true;
 		if (!displayProjects && document.getElementById('projects').hasPartInViewport()) displayProjects = true;
 
@@ -46,7 +42,7 @@
 		}
 	}
 
-	async function animateIntroPage() {
+	async function animateIntroPage () {
 		let intoContentElements = document.querySelectorAll('.pre-intro-content');
 		for (let i = 0; i < intoContentElements.length; i++) {
 			await sleep(200);
@@ -61,6 +57,11 @@
 		}
 	}
 
+	const onRefresh = () => {
+		checkSections();
+		headerScrolled();
+	};
+
 	window.addEventListener('load', async () => {
 		let headerContentElements = document.querySelectorAll('.pre-header-content');
 		for (let i = headerContentElements.length - 1; i >= 0; i--) {
@@ -70,99 +71,55 @@
 
 		animateIntroPage();
 		checkSections();
-		checkHeaderScrolled();
+		headerScrolled();
 	});
 
-	window.addEventListener('scroll', () => {
-		checkSections();
-		checkHeaderScrolled();
-	});
-
-	window.addEventListener('resize', () => {
-		checkSections();
-		checkHeaderScrolled();
-	});
+	window.addEventListener('scroll', onRefresh);
+	window.addEventListener('resize', onRefresh);
 </script>
 
-<div class="background"></div>
+<div class="background"/>
 
-<div class="header {scrolledHeader ? 'scrolled-header' : ''}">
-	<span class="pre-header-content" style="display: inline-block;"><h2>TheSudarsanDev</h2></span>
-	<span class="buttons">
-		<button class="pre-header-content" on:click={() => window.scrollTo({ top: 0, behaviour: 'smooth' })}>Home</button>
-		<button class="pre-header-content" on:click={scrollNavigationHandler('about')}>About</button>
-		<button class="pre-header-content" on:click={scrollNavigationHandler('projects')}>Projects</button>
-	</span>
-</div>
+<Header {scrolledHeader}/>
+<Intro/>
 
-<div class="intro" id="intro">
-	<div class="content">
-		<h1 class="pre-intro-content">TheSudarsanDev</h1>
-		<h2 class="pre-intro-content">Yet Another Random Developer</h2>
-		<p class="pre-intro-content">I'm Sudarsan, a high school student who likes to do programming and stuff. I am a full stack developer and i mostly build user interfaces with the prominent programming language as Javascript.</p>
-	</div> 
+<Section
+	i=1
+	id="about"
+	name="About me"
+	display={displayAbout}
+>
+	<About/>
+</Section>
 
-	<div class="socialcards">
-		{#each SocialLinks as link}
-			<a 
-				style="--color: #{link.color};" 
-				class="pre-socialcard socialcard social-{link.name}" href={link.url}
-			>
-				<i class="fab fa-{link.name}"/>
-			</a>
-		{/each}
-	</div>
-</div>
+<Section
+	i=2
+	id="projects"
+	name="Projects"
+	display={displayProjects}
+>
+	<Projects/>
+</Section>
 
-<div class="about" id="about">
-	{#if displayAbout}
-	    <div class="section-inner">
-			<h1 class="section-title"><span>01.</span> About me</h1>
+<div class="footer text-white font-changa">© TheSudarsanDev {new Date().getFullYear()}</div>
 
-			<div class="about-flex">
-				<div>
-					<div style="padding-right: 20px;">
-						<div class="pfp"></div>
-					</div>
-				</div>
+<style>
+	.background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: #252931 url(/scenary.jpg) no-repeat;
+		background-size: cover;
+		background-blend-mode: multiply;
+	}
 
-				<div class="text">
-					Hi, I'm <strong>Sudarsan</strong>. I am a full stack web developer with <strong>TheSudarsanDev</strong> (abbrv. The Sudarsan Developer) as my internet username.<br/><br/>
-					I am a high school student from <strong>India</strong> who started programming with <strong>Python</strong> in <strong>2018</strong> then consequently started with web development with <strong>Javascript</strong> and then started to learn programming languages such as 
-					<strong>Golang</strong>, <strong>Rust</strong> and learning more. And i draw and animate rarely and one of the creation is my avatar.<br/><br/>
-					Things i know:<br/>
-
-					<div style="display: flex; flex-wrap: wrap; margin-top: 6px;">
-						{#each ThingsIKnow as thing}
-							<img 
-								src="https://raw.githubusercontent.com/devicons/devicon/master/icons/{thing[0]}/{thing[0]}-{thing[1]}.svg"
-								draggable="false" 
-								alt={thing[0]} 
-								width="30" 
-								height="30" 
-								style="cursor: pointer;"
-							/>
-						{/each}
-					</div>
-
-					<div style="height: 80px;"></div>
-				</div>
-			</div>
-		</div>
-	{/if}
-</div>
-
-<div class="projects" id="projects">
-	{#if displayProjects}
-	    <div class="section-inner">
-			<h1 class="section-title"><span>02.</span> Projects</h1>
-			<div class="project-list">
-				{#each Projects as project}
-					<Project project={project}/>
-			    {/each}
-			</div>
-		</div>
-	{/if}
-</div>
-
-<div class="footer">© TheSudarsanDev {new Date().getFullYear()}</div>
+	.footer {
+		position: relative; 
+		width: 100%;
+		padding: 10px 0;
+		font-size: 20px;
+		text-align: center;
+	}
+</style>

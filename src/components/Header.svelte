@@ -1,12 +1,12 @@
 <script>
-    export let scrolledHeader;
+	export let scrolledHeader;
 
-    function scrollNavigationHandler (id) {
+	function scrollNavigationHandler (id) {
 		return () => {
 			let top = (
-                document.getElementById(id).getBoundingClientRect().top - 
-                document.body.getBoundingClientRect().top
-            );
+				document.getElementById(id).getBoundingClientRect().top - 
+				document.body.getBoundingClientRect().top
+			);
 
 			window.scrollTo({ top, behavior: 'smooth' });
 		};
@@ -26,7 +26,7 @@
 </div>
 
 <style>
-    .header {
+	.header {
 		width: calc(100vw - 80px);
 		padding: 5px 40px;
 		z-index: 10;
@@ -50,8 +50,8 @@
 		font-weight: bolder;
 		font-size: 15px;
 		display: inline-block;
-        cursor: pointer;
-        color: white;
+		cursor: pointer;
+		color: white;
 		margin-top: 18px;
 	}
 
@@ -59,36 +59,36 @@
 		color: var(--blue);
 	}
 
-    :global(.pre-header-content) {
-	    opacity: 0;
-    }
+	:global(.pre-header-content) {
+		opacity: 0;
+	}
 
-    :global(.header *:not(.pre-header-content)) {
-	    animation: header-content-animation .5s forwards;
-    }
+	:global(.header *:not(.pre-header-content)) {
+		animation: header-content-animation .5s forwards;
+	}
 
-    :global(.scrolled-header) {
-	    background-color: var(--header-color);
-	    padding: 5px 20px;
-	    width: calc(100vw - 40px);
-    }
+	:global(.scrolled-header) {
+		background-color: var(--header-color);
+		padding: 5px 20px;
+		width: calc(100vw - 40px);
+	}
 
-    @media (max-width: 600px) {
-        .header {
-		    padding: 10px 7vw;
-		    width: calc(100% - 20px);
-	    }
+	@media (max-width: 600px) {
+		.header {
+			padding: 10px 7vw;
+			width: calc(100% - 20px);
+		}
 
-	    .header h2 {
-		    display: none;
-	    }
+		.header h2 {
+			display: none;
+		}
 
-	    .header .buttons {
-		    float: left;
-	    }
+		.header .buttons {
+			float: left;
+		}
 
-    	.scrolled-header {
-		    display: none;
-	    }
-    }
+		.scrolled-header {
+			display: none;
+		}
+	}
 </style>

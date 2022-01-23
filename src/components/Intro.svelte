@@ -1,5 +1,5 @@
 <script>
-    import { SocialLinks } from "../constants";
+	import { SocialLinks } from "../constants";
 </script>
 
 <div class="intro text-white font-changa flex" id="intro">
@@ -23,7 +23,7 @@
 </div>
 
 <style>
-    .intro {
+	.intro {
 		position: relative;
 		margin: auto;
 		min-height: 100vh;
@@ -57,10 +57,10 @@
 		display: block;
 	}
 
-    :global(.pre-intro-content),
-    :global(.pre-socialcard) {
-        opacity: 0!important;
-    }
+	:global(.pre-intro-content),
+	:global(.pre-socialcard) {
+		opacity: 0!important;
+	}
 
 	:global(.intro .content *:not(.pre-intro-content)) {
 		animation: intro-content-animation 1s forwards;
@@ -90,20 +90,20 @@
 		color: var(--color);
 	}
 
-    :global(.socialcard svg) {
-	    display: inline-block;
-	    margin: 12px;
-    }
+	:global(.socialcard svg) {
+		display: inline-block;
+		margin: 12px;
+	}
 
-    :global(.social-youtube svg) {
-	    margin: 11px;
-    }
+	:global(.social-youtube svg) {
+		margin: 11px;
+	}
 
-    :global(.socialcard:not(.pre-socialcard)) {
-	    animation: socialcard-animation 1s forwards;
-    }
+	:global(.socialcard:not(.pre-socialcard)) {
+		animation: socialcard-animation 1s forwards;
+	}
 
-    @media (max-height: 450px) {
+	@media (max-height: 450px) {
 		.intro {
 			margin-top: 80px;
 			width: calc(100vh - 80px);

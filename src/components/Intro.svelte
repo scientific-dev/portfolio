@@ -2,7 +2,7 @@
     import { SocialLinks } from "../constants";
 </script>
 
-<div class="intro text-white font-changa" id="intro">
+<div class="intro text-white font-changa flex" id="intro">
 	<div class="content">
 		<h1 class="pre-intro-content">TheSudarsanDev</h1>
 		<h2 class="pre-intro-content">Yet Another Random Developer</h2>
@@ -13,7 +13,7 @@
 		{#each SocialLinks as link}
 			<a 
 				style="--color: #{link.color};" 
-				class="pre-socialcard socialcard social-{link.name}" 
+				class="pre-socialcard socialcard social-{link.name} cursor-pointer" 
 				href={link.url}
 			>
 				<i class="fab fa-{link.name}"/>
@@ -29,7 +29,6 @@
 		min-height: 100vh;
 		align-items: flex-start;
 		justify-content: center;
-		display: flex;
 		flex-direction: column;
 		width: 85vw;
 	}
@@ -79,10 +78,8 @@
 		margin-bottom: 10px;
 		margin-left: 12px;
 		text-decoration: none;
-		cursor: pointer;
 		display: inline-block;
 		background-color: var(--color);
-		transition: .2s;
 	}
 
 	.socialcard:hover {

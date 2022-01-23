@@ -78,7 +78,7 @@
 	window.addEventListener('resize', onRefresh);
 </script>
 
-<div class="background"/>
+<div class="background position-fixed"/>
 
 <Header {scrolledHeader}/>
 <Intro/>
@@ -105,9 +105,6 @@
 
 <style>
 	.background {
-		position: fixed;
-		top: 0;
-		left: 0;
 		width: 100vw;
 		height: 100vh;
 		background: #252931 url(/scenary.jpg) no-repeat;

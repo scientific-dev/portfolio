@@ -13,7 +13,7 @@
 	}
 </script>
 
-<div class="header font-changa text-white {scrolledHeader ? 'scrolled-header' : ''}">
+<div class="header font-changa text-white position-fixed {scrolledHeader ? 'scrolled-header' : ''}">
 	<span class="pre-header-content" style="display: inline-block;">
 		<h2>TheSudarsanDev</h2>
 	</span>
@@ -27,15 +27,9 @@
 
 <style>
     .header {
-		position: fixed;
-		top: 0;
-		left: 0;
 		width: calc(100vw - 80px);
 		padding: 5px 40px;
 		z-index: 10;
-		-webkit-transition: .2s;
-		-moz-transition: .2s;
-		transition: .2s;
 	}
 
 	.header h2 {
@@ -50,14 +44,14 @@
 
 	.header button {
 		background: transparent;
-		color: white;
 		outline: none;
-		cursor: pointer;
 		text-transform: uppercase;
 		border: none;
 		font-weight: bolder;
 		font-size: 15px;
 		display: inline-block;
+        cursor: pointer;
+        color: white;
 		margin-top: 18px;
 	}
 

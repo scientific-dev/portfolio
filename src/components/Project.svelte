@@ -2,14 +2,14 @@
     export let project;
 </script>
 
-<div class="project-card pre-project-card">
+<div class="project-card pre-project-card flex">
     <header>
         <div class="title"> 
             <i class="far fa-folder-open fa-2x"/>
             <h3>{project.name}</h3>
         </div>
 
-        <p class="description">{project.description}</p>
+        <p class="description m-0">{project.description}</p>
         <div style="height: 10px;"></div>
     </header>
 
@@ -22,7 +22,7 @@
 
         <span class="svg-links">
             {#each project.buttons as button}
-                <a href={button.href}>
+                <a href={button.href} class="cursor-pointer text-white">
                     <i class={button.svg}/>
                 </a>
             {/each}
@@ -38,7 +38,6 @@
     	margin-top: 20px;
 	    -webkit-box-pack: justify;
 	    justify-content: space-between;
-	    display: flex;
 	    flex-direction: column;
     }
 
@@ -51,7 +50,6 @@
 
     .project-card .description {
 	    opacity: .8;
-	    margin: 0;
     	line-height: 1.1;
 	    margin-top: 4px;
     }
@@ -77,10 +75,8 @@
 
     .project-card .svg-links a {
 	    opacity: .7;
-	    cursor: pointer;
 	    margin: 0;
 	    margin-left: 2px;
-	    color: white;
 	    text-decoration: none;
 	    font-size: 18px;
     }

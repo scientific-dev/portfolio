@@ -114,15 +114,27 @@ body {
 	}
 }
 
-/** Global CSS */
+/** Tailwind like Global CSS */
 
 .font-changa { font-family: "Changa"; }
 .text-white { color: white; }
+.cursor-pointer { cursor: pointer; }
+
 .m-0 { margin: 0; }
+
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+.position-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
 
 /** Combined CSS */
 
-.pfp, .pfp::after {
+.pfp, .pfp::after, .header, .socialcard {
 	-webkit-transition: .2s;
     -moz-transition: .2s;
 	transition: .2s;

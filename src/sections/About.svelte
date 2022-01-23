@@ -5,7 +5,7 @@
 <div class="about-flex">
     <div>
         <div style="padding-right: 20px;">
-            <div class="pfp"/>
+            <div class="pfp cursor-pointer"/>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
         <strong>Golang</strong>, <strong>Rust</strong> and learning more. And i draw and animate rarely and one of the creation is my avatar.<br/><br/>
         Things i know:<br/>
 
-        <div style="display: flex; flex-wrap: wrap; margin-top: 6px;">
+        <div class="flex flex-wrap" style="margin-top: 6px;">
             {#each ThingsIKnow as thing}
                 <img 
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/{thing[0]}/{thing[0]}-{thing[1]}.svg"
@@ -23,7 +23,7 @@
                     alt={thing[0]} 
                     width=30 
                     height=30
-                    style="cursor: pointer;"
+                    class="cursor-pointer"
                 />
             {/each}
         </div>
@@ -37,7 +37,6 @@
 	    width: 300px;
 	    height: 300px;
     	border-radius: 6px;
-	    cursor: pointer;
 	    background: var(--blue) url(/branding96.png) no-repeat;
 	    background-blend-mode: luminosity;
 	    background-size: cover;

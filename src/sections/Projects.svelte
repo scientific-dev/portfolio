@@ -3,7 +3,7 @@
     import { Projects } from '../constants';
 </script>
 
-<div class="project-list">
+<div class="project-list flex flex-wrap">
     {#each Projects as project}
         <Project {project}/>
     {/each}
@@ -21,8 +21,6 @@
         .project-list {
 		    --card-flex: 40%;
 		    --card-count: 2;
-		    display: flex;
-	    	flex-wrap: wrap;
             margin-left: calc(50% - (var(--card-count) / 2) * (var(--card-flex) + 60px));
 	    }
     }

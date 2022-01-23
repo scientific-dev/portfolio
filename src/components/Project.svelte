@@ -9,7 +9,7 @@
 			<h3>{project.name}</h3>
 		</div>
 
-		<p class="description m-0">{project.description}</p>
+		<p class="m-0">{project.description}</p>
 		<div style="height: 10px;"></div>
 	</header>
 
@@ -41,24 +41,24 @@
 		flex-direction: column;
 	}
 
-	.project-card .title h3 {
+	h3 {
 		font-weight: lighter;
 		line-height: 0;
 		font-size: 22px;
 		display: inline-block;
 	}
 
-	.project-card .description {
+	header p {
 		opacity: .8;
 		line-height: 1.1;
 		margin-top: 4px;
 	}
 
-	.project-card .languages {
+	.languages {
 		margin-left: -5px;
 	}
 
-	.project-card .languages p {
+	.languages p {
 		margin: 0;
 		margin-left: 5px;
 		display: inline-block;
@@ -101,7 +101,7 @@
 	}
 
 	@media (min-width: 400px) {
-		.project-card .title {
+		.title {
 			display: flex;
 			flex-wrap: nowrap;
 		}
@@ -110,7 +110,7 @@
 			color: var(--blue);
 		}
 
-		.project-card .title h3 {
+		h3 {
 			margin-top: 16px;
 			margin-left: 8px;
 		}

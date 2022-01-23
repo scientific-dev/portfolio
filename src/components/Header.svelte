@@ -32,17 +32,13 @@
 		z-index: 10;
 	}
 
-	.header h2 {
+	h2 {
 		margin: 0;
 		font-weight: lighter;
 		font-size: 30px;
 	}
 
-	.buttons {
-		float: right;
-	}
-
-	.header button {
+	button {
 		background: transparent;
 		outline: none;
 		text-transform: uppercase;
@@ -55,8 +51,12 @@
 		margin-top: 18px;
 	}
 
-	.header button:hover {
+	button:hover {
 		color: var(--blue);
+	}
+
+	.buttons {
+		float: right;
 	}
 
 	:global(.pre-header-content) {
@@ -79,16 +79,8 @@
 			width: calc(100% - 20px);
 		}
 
-		.header h2 {
-			display: none;
-		}
-
-		.header .buttons {
-			float: left;
-		}
-
-		.scrolled-header {
-			display: none;
-		}
+		h2 { display: none; }
+		.buttons { float: left; }
+		.scrolled-header { display: none; }
 	}
 </style>

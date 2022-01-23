@@ -72,7 +72,7 @@
 		margin-top: 30px;
 	}
 
-	.text strong {
+	strong {
 		font-weight: lighter;
 		color: var(--lighter-blue);
 		opacity: 1!important;

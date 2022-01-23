@@ -5,7 +5,10 @@
 <div class="section font-changa text-white {id}" {id}>
 	{#if display}
 		<div class="section-inner">
-			<h1 class="section-title m-0"><span>0{i}.</span> {name}</h1>
+			<h1 class="section-title m-0">
+				<span>0{i}.</span> {name}
+			</h1>
+			
 			<slot></slot>
 		</div>
 	{/if}

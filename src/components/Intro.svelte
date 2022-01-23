@@ -33,13 +33,13 @@
 		width: 85vw;
 	}
 
-	.intro h1 {
+	h1 {
 		margin: 0;
 		line-height: 1;
 		font-size: clamp(40px, 8vw, 74px);
 	}
 
-	.intro h2 {
+	h2 {
 		margin: 0;
 		margin-top: 10px;
 		line-height: 1;
@@ -47,7 +47,7 @@
 		opacity: .85;
 	}
 
-	.intro p {
+	p {
 		margin-top: 20px;
 		line-height: 1.2;
 		letter-spacing: 1.3px;
@@ -112,11 +112,11 @@
 
 	@media (max-width: 1024px) {
 		.intro { width: 80vw; }
-		.intro p { font-size: 16px; }
+		p { font-size: 16px; }
 	}
 
 	@media (max-width: 500px) {
 		.intro { width: 85vw; }
-		.intro p { width: 100%; }
+		p { width: 100%; }
 	}
 </style>

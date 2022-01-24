@@ -19,6 +19,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "csso": "^5.0.2",
     "sirv-cli": "^1.0.0"
   }
 }

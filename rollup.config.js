@@ -4,6 +4,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import { minify } from 'csso';
+import fs from 'fs';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -42,9 +44,12 @@ export default {
 				dev: !production
 			}
 		}),
+
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
-		css({ output: 'bundle.css' }),
+		css({ 
+			output: (styles) => fs.writeFileSync('public/build/bundle.css', minify(styles).css)
+		}),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In

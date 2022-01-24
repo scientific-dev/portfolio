@@ -4,7 +4,7 @@
 	import Section from './components/Section.svelte';
 	import About from './sections/About.svelte';
 	import Projects from './sections/Projects.svelte';
-	import './global.css';
+	import './styles/global.css';
 
 	const SECTIONS = ['about', 'projects'];
 

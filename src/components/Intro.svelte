@@ -33,16 +33,17 @@
 		width: 85vw;
 	}
 
-	h1 {
+	h1, h2 {
 		margin: 0;
 		line-height: 1;
+	}
+
+	h1 {
 		font-size: clamp(40px, 8vw, 74px);
 	}
 
 	h2 {
-		margin: 0;
 		margin-top: 10px;
-		line-height: 1;
 		font-size: clamp(30px, 4vw, 80px);
 		opacity: .85;
 	}
@@ -55,15 +56,6 @@
 		font-size: 20px;
 		opacity: .8;
 		display: block;
-	}
-
-	:global(.pre-intro-content),
-	:global(.pre-socialcard) {
-		opacity: 0!important;
-	}
-
-	:global(.intro .content *:not(.pre-intro-content)) {
-		animation: intro-content-animation 1s forwards;
 	}
 
 	.socialcards {
@@ -84,6 +76,15 @@
 
 	.socialcard:hover {
 		background-color: white;
+	}
+
+	:global(.pre-intro-content),
+	:global(.pre-socialcard) {
+		opacity: 0!important;
+	}
+
+	:global(.intro .content *:not(.pre-intro-content)) {
+		animation: intro-content-animation 1s forwards;
 	}
 
 	:global(.socialcard:hover svg) {

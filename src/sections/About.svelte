@@ -45,14 +45,14 @@
 
 	.pfp::after {
 		content: "";
+		position: relative;
+		top: 15px;
+		left: 15px;
 		display: block;
 		border: 3px solid var(--blue);
 		width: 300px;
 		height: 300px;
 		border-radius: 6px;
-		position: relative;
-		top: 15px;
-		left: 15px;
 	}
 
 	.pfp:hover, .pfp:focus {

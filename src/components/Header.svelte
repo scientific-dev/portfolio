@@ -11,6 +11,10 @@
 			window.scrollTo({ top, behavior: 'smooth' });
 		};
 	}
+
+	function scrollToTop () {
+		window.scrollTo({ top: 0, behaviour: 'smooth' });
+	}
 </script>
 
 <div class="header font-changa text-white position-fixed {scrolledHeader ? 'scrolled-header' : ''}">
@@ -19,7 +23,7 @@
 	</span>
 
 	<span class="buttons">
-		<button class="pre-header-content" on:click={() => window.scrollTo({ top: 0, behaviour: 'smooth' })}>Home</button>
+		<button class="pre-header-content" on:click={scrollToTop}>Home</button>
 		<button class="pre-header-content" on:click={scrollNavigationHandler('about')}>About</button>
 		<button class="pre-header-content" on:click={scrollNavigationHandler('projects')}>Projects</button>
 	</span>
@@ -39,16 +43,16 @@
 	}
 
 	button {
-		background: transparent;
 		outline: none;
-		text-transform: uppercase;
 		border: none;
-		font-weight: bolder;
-		font-size: 15px;
 		display: inline-block;
 		cursor: pointer;
-		color: white;
 		margin-top: 18px;
+		background: transparent;
+		color: white;
+		text-transform: uppercase;
+		font-weight: bolder;
+		font-size: 15px;
 	}
 
 	button:hover {
@@ -72,7 +76,7 @@
 		padding: 5px 20px;
 		width: calc(100vw - 40px);
 	}
-
+	
 	@media (max-width: 600px) {
 		.header {
 			padding: 10px 7vw;

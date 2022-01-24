@@ -36,6 +36,7 @@
 		border-radius: 4px;
 		padding: 20px;
 		margin-top: 20px;
+		width: 100%;
 		-webkit-box-pack: justify;
 		justify-content: space-between;
 		flex-direction: column;
@@ -67,13 +68,13 @@
 		font-family: "Titillium Web";
 	}
 
-	.project-card .svg-links {
+	.svg-links {
 		display: block;
 		margin-left: -2px;
 		margin-top: -4px;
 	}
 
-	.project-card .svg-links a {
+	a {
 		opacity: .7;
 		margin: 0;
 		margin-left: 2px;
@@ -81,7 +82,7 @@
 		font-size: 18px;
 	}
 
-	.project-card .svg-links a:hover {
+	a:hover {
 		opacity: 1;
 	}
 

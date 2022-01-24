@@ -59,15 +59,6 @@ export const Projects = [
 		]
 	},
 	{
-		name: 'Templatify',
-		description: 'A cli to create local templates and copy templates from github which is saved within your pc and used easily!',
-		languages: ['Go'],
-		link: 'https://github.com/Scientific-Dev/templatify',
-		buttons: [
-			makeBtn('https://github.com/Scientific-Dev/templatify', 'GitHub')
-		]
-	},
-	{
 		name: 'EvtManager',
 		description: 'Simple to use eventemitter to manage your events synchronously and asynchronously too for Deno, Node and browser with a typesafe environment!',
 		link: 'https://github.com/scientific-dev/evtmanager',
@@ -76,6 +67,15 @@ export const Projects = [
 			makeBtn('https://github.com/scientific-dev/evtmanager', 'GitHub'),
 			makeBtn('https://npmjs.com/package/evtmanager', 'NPM'),
 			makeBtn('https://deno.land/x/evtmanager', 'Deno')
+		]
+	},
+	{
+		name: 'Templatify',
+		description: 'A cli to create local templates and copy templates from github which is saved within your pc and used easily!',
+		languages: ['Go'],
+		link: 'https://github.com/Scientific-Dev/templatify',
+		buttons: [
+			makeBtn('https://github.com/Scientific-Dev/templatify', 'GitHub')
 		]
 	},
 	{
@@ -116,6 +116,15 @@ export const Projects = [
 		buttons: [
 			makeBtn('https://github.com/spotify-api/spotify-types', 'GitHub'),
 			makeBtn('https://npmjs.com/package/spotify-types', 'NPM')
+		]
+	},
+	{
+		name: 'Portfolio',
+		description: 'The site which you are watching now!',
+		languages: ['Javascript', 'Svelte'],
+		link: 'https://thesudarsandev.xyz/',
+		buttons: [
+			makeBtn('https://github.com/scientific-dev/portfolio', 'GitHub')
 		]
 	}
 ];

@@ -31,16 +31,6 @@ export const Projects = [
 		]
 	},
 	{
-		name: 'Enhanced.db',
-		description: 'A npm package which is a wrapper for better-sqlite3! Currently not maintained...',
-		languages: ['Javascript'],
-		link: 'https://npmjs.com/package/enhanced.db',
-		buttons: [
-			makeBtn('https://github.com/Scientific-Dev/enhanced.db', 'GitHub'),
-			makeBtn('https://npmjs.com/package/enhanced.db', 'Link')
-		]
-	},
-	{
 		name: 'Instant.db',
 		description: 'Instant.db helps you to make database instantly using json files for Node.js!',
 		languages: ['Javascript'],
@@ -48,6 +38,15 @@ export const Projects = [
 		buttons: [
 			makeBtn('https://github.com/Scientific-Dev/instant.db', 'GitHub'),
 			makeBtn('https://npmjs.com/package/instant.db', 'Link')
+		]
+	},
+	{
+		name: 'Ludo',
+		description: 'An awesome site to play singleplayer ludo for fun even with bots!',
+		link: 'https://scientific-dev.github.io/ludo?game',
+		languages: ['Svelte', 'Javascript'],
+		buttons: [
+			makeBtn('https://github.com/scientific-dev/ludo', 'GitHub')
 		]
 	},
 	{
@@ -100,12 +99,23 @@ export const Projects = [
 		]
 	},
 	{
-		name: 'Ludo',
-		description: 'An awesome site to play singleplayer ludo for fun even with bots!',
-		link: 'https://scientific-dev.github.io/ludo?game',
-		languages: ['Svelte', 'Javascript'],
+		name: 'Enhanced.db',
+		description: 'A npm package which is a wrapper for better-sqlite3! Currently not maintained...',
+		languages: ['Javascript'],
+		link: 'https://npmjs.com/package/enhanced.db',
 		buttons: [
-			makeBtn('https://github.com/scientific-dev/ludo', 'GitHub')
+			makeBtn('https://github.com/Scientific-Dev/enhanced.db', 'GitHub'),
+			makeBtn('https://npmjs.com/package/enhanced.db', 'Link')
+		]
+	},
+	{
+		name: 'Spotify Types',
+		description: 'All the typings for the various Spotify API Object typings written in typescript.',
+		languages: ['Typescript'],
+		link: 'https://npmjs.com/package/spotify-types',
+		buttons: [
+			makeBtn('https://github.com/spotify-api/spotify-types', 'GitHub'),
+			makeBtn('https://npmjs.com/package/spotify-types', 'NPM')
 		]
 	}
 ];

@@ -1,15 +1,35 @@
 <script>
 	import Project from '../components/Project.svelte';
 	import { Projects } from '../constants';
+
+	let displayAll = false;
 </script>
 
 <div class="project-list flex flex-wrap">
-	{#each Projects as project}
+	{#each Projects.slice(0, displayAll ? Projects.length : 6) as project}
 		<Project {project}/>
 	{/each}
 </div>
 
+<p 
+	class="cursor-pointer"
+	on:click={() => displayAll = !displayAll}
+>
+	View {displayAll ? 'less' : 'all'} projects?
+</p>
+
 <style>
+	p {
+		margin-top: 10px;
+		font-size: 20px;
+		text-align: center;
+		display: lock;
+	}
+
+	p:hover {
+		opacity: .85;
+	}
+
 	@media (min-width: 1200px) {
 		.project-list {
 			--card-flex: 25%!important;

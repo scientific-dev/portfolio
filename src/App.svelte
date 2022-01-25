@@ -22,14 +22,12 @@
 		return (top + (height / 3)) <= (window.innerHeight || document.documentElement.clientHeight);
 	} 
 
-	window.scrollPos = () => window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
 	function sleep (ms) {
 		return new Promise(r => setTimeout(r, ms));
 	}
 	
 	function headerScrolled () {
-		scrolledHeader = window.scrollPos() > 20;
+		scrolledHeader = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop) > 20;
 	}
 
 	async function checkSections () {

@@ -23,7 +23,7 @@ export const Projects = [
 	{
 		name: 'Spotify-api.js',
 		description: 'A npm package to interact with spotify api with node.js with oauth support. This package also supports caching!',
-		languages: ['Typescript', 'Javascript'],
+		languages: ['Javascript', 'Typescript'],
 		link: 'https://npmjs.com/package/spotify-api.js',
 		buttons: [
 			makeBtn('https://github.com/spotify-api/spotify-api.js', 'GitHub'),

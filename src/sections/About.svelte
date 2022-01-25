@@ -1,5 +1,5 @@
 <script>
-	import { ThingsIKnow } from "../constants";
+	import { ThingsIKnow } from "../scripts/constants";
 </script>
 
 <div class="about-flex">

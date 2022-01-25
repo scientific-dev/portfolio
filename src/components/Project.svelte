@@ -9,7 +9,7 @@
 			<h3>{project.name}</h3>
 		</div>
 
-		<p class="m-0">{project.description}</p>
+		<p class="text-description m-0">{project.description}</p>
 		<div style="height: 10px;"></div>
 	</header>
 
@@ -49,12 +49,6 @@
 		display: inline-block;
 	}
 
-	header p {
-		opacity: .8;
-		line-height: 1.1;
-		margin-top: 4px;
-	}
-
 	.languages {
 		margin-left: -5px;
 	}
@@ -88,10 +82,6 @@
 
 	:global(.project-card:not(.pre-project-card)) {
 		animation: section-animation 1s forwards;
-	}
-
-	:global(.pre-project-card) {
-		opacity: 0;
 	}
 
 	@media (min-width: 800px) {

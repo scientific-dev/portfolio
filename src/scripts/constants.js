@@ -81,7 +81,7 @@ export const Projects = [
 	{
 		name: 'Emoji Canvas',
 		description: 'An easy to use module to write text with parsed emojis (supports discord emojis too) in canvas for deno!',
-		languages: ['Javascript', 'Typescript'],
+		languages: ['Javascript', 'Typescript', 'Deno'],
 		link: 'https://github.com/Scientific-Dev/emoji-canvas',
 		buttons: [
 			makeBtn('https://github.com/Scientific-Dev/emoji-canvas', 'GitHub'),

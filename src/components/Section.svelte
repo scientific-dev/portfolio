@@ -41,6 +41,5 @@
 		width: 85vw;
 		margin: auto;
 		animation: section-animation 1s forwards;
-		opacity: 0;
 	}
 </style>

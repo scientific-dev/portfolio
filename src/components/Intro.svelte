@@ -1,5 +1,5 @@
 <script>
-	import { SocialLinks } from "../constants";
+	import { SocialLinks } from "../scripts/constants";
 </script>
 
 <div class="intro text-white font-changa flex" id="intro">

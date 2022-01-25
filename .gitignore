@@ -3,4 +3,4 @@ package-lock.json
 global.css.pretty
 /public/build/
 .DS_Store
-journey.js
+/activities.js

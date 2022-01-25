@@ -1,6 +1,6 @@
 <script>
 	import Project from '../components/Project.svelte';
-	import { Projects } from '../constants';
+	import { Projects } from '../scripts/constants';
 
 	let displayAll = false;
 </script>
@@ -12,7 +12,7 @@
 </div>
 
 <p 
-	class="cursor-pointer"
+	class="cursor-pointer project-card pre-project-card"
 	on:click={() => displayAll = !displayAll}
 >
 	View {displayAll ? 'less' : 'all'} projects?

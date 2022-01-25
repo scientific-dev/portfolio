@@ -4,9 +4,10 @@
 	import Section from './components/Section.svelte';
 	import About from './sections/About.svelte';
 	import Projects from './sections/Projects.svelte';
+	import Timeline from './sections/Timeline.svelte';
 	import './styles/global.css';
 
-	const SECTIONS = ['about', 'projects'];
+	const SECTIONS = ['about', 'projects', 'timeline'];
 
 	let scrolledHeader = false;
 	let displayStates = { about: false, projects: false };
@@ -22,6 +23,11 @@
 		return (top + (height / 3)) <= (window.innerHeight || document.documentElement.clientHeight);
 	} 
 
+	Element.prototype.almostInViewport = function () {
+		var { top, height } = this.getBoundingClientRect();
+		return (top + (height / 1.5)) <= (window.innerHeight || document.documentElement.clientHeight);
+	} 
+
 	function sleep (ms) {
 		return new Promise(r => setTimeout(r, ms));
 	}
@@ -30,20 +36,25 @@
 		scrolledHeader = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop) > 20;
 	}
 
+	async function checkPreElements (className, type) {
+		let preElements = document.querySelectorAll(`.${className}`);
+		for (let i = 0; i < preElements.length; i++) {
+			if (preElements[i][type]()) {
+				preElements[i].classList.remove(className);
+				await sleep(1000);
+			}
+		}
+	}
+
 	async function checkSections () {
 		for (let i = 0; i < SECTIONS.length; i++) {
 			let id = SECTIONS[i];
 			if (!displayStates[id] && document.getElementById(id).hasPartInViewport())
 				displayStates = Object.defineProperty(displayStates, id, { value: true });
 		}
-
-		let projectCardElements = document.querySelectorAll('.pre-project-card');
-		for (let i = 0; i < projectCardElements.length; i++) {
-			if (projectCardElements[i].inViewport()) {
-				projectCardElements[i].classList.remove('pre-project-card');
-				await sleep(1000);
-			}
-		}
+		
+		checkPreElements('pre-project-card', 'inViewport');
+		checkPreElements('pre-activity', 'almostInViewport');
 	}
 
 	async function animateIntroPage () {
@@ -103,6 +114,15 @@
 	display={displayStates.projects}
 >
 	<Projects/>
+</Section>
+
+<Section
+	i=3
+	id="timeline"
+	name="Timeline"
+	display={displayStates.timeline}
+>
+	<Timeline/>
 </Section>
 
 <div class="footer text-white font-changa">© TheSudarsanDev {new Date().getFullYear()}</div>

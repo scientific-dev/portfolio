@@ -70,15 +70,6 @@ export const Projects = [
 		]
 	},
 	{
-		name: 'Templatify',
-		description: 'A cli to create local templates and copy templates from github which is saved within your pc and used easily!',
-		languages: ['Go'],
-		link: 'https://github.com/Scientific-Dev/templatify',
-		buttons: [
-			makeBtn('https://github.com/Scientific-Dev/templatify', 'GitHub')
-		]
-	},
-	{
 		name: 'Emoji Canvas',
 		description: 'An easy to use module to write text with parsed emojis (supports discord emojis too) in canvas for deno!',
 		languages: ['Javascript', 'Typescript', 'Deno'],
@@ -86,6 +77,15 @@ export const Projects = [
 		buttons: [
 			makeBtn('https://github.com/Scientific-Dev/emoji-canvas', 'GitHub'),
 			makeBtn('deno.land/x/emoji_canvas', 'Deno')
+		]
+	},
+	{
+		name: 'Templatify',
+		description: 'A cli to create local templates and copy templates from github which is saved within your pc and used easily!',
+		languages: ['Go'],
+		link: 'https://github.com/Scientific-Dev/templatify',
+		buttons: [
+			makeBtn('https://github.com/Scientific-Dev/templatify', 'GitHub')
 		]
 	},
 	{
@@ -120,7 +120,7 @@ export const Projects = [
 	},
 	{
 		name: 'Portfolio',
-		description: 'The site which you are watching now!',
+		description: 'The site which you are watching now...',
 		languages: ['Javascript', 'Svelte'],
 		link: 'https://thesudarsandev.xyz/',
 		buttons: [

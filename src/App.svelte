@@ -4,10 +4,9 @@
 	import Section from './components/Section.svelte';
 	import About from './sections/About.svelte';
 	import Projects from './sections/Projects.svelte';
-	import Timeline from './sections/Timeline.svelte';
 	import './styles/global.css';
 
-	const SECTIONS = ['about', 'projects', 'timeline'];
+	const SECTIONS = ['about', 'projects'];
 
 	let scrolledHeader = false;
 	let displayStates = { about: false, projects: false };
@@ -54,7 +53,6 @@
 		}
 		
 		checkPreElements('pre-project-card', 'inViewport');
-		checkPreElements('pre-activity', 'almostInViewport');
 	}
 
 	async function animateIntroPage () {
@@ -114,15 +112,6 @@
 	display={displayStates.projects}
 >
 	<Projects/>
-</Section>
-
-<Section
-	i=3
-	id="timeline"
-	name="Timeline"
-	display={displayStates.timeline}
->
-	<Timeline/>
 </Section>
 
 <div class="footer text-white font-changa">© TheSudarsanDev {new Date().getFullYear()}</div>

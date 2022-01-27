@@ -16,7 +16,7 @@ export const SocialLinks = [
 	// { name: 'youtube', url: 'https://www.youtube.com/channel/UCu6B4Z62fiCT_mwwHlc84iQ', color: 'ff0000' },
 	{ name: 'github', url: 'https://github.com/scientific-dev', color: '211f1f' },
 	{ name: 'twitter', url: 'https://twitter.com/ScientificDev', color: '1da1f2' },
-	{ name: 'discord', url: 'https://discord.gg/FrduEZd', color: '7298da' }
+	{ name: 'discord', url: 'https://discord.gg/qFNwUNpSx8', color: '7298da' }
 ];
 
 export const Projects = [

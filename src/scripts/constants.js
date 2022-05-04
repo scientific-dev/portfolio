@@ -31,13 +31,12 @@ export const Projects = [
 		]
 	},
 	{
-		name: 'Instant.db',
-		description: 'Instant.db helps you to make database instantly using json files for Node.js!',
-		languages: ['Javascript'],
-		link: 'https://npmjs.com/package/instant.db',
+		name: 'Periodic Table',
+		description: 'An interactive periodic table website displaying each element\'s name, atomic number, mass number, physical properties, chemical properties, etc',
+		languages: ['Javascript', 'Svelte'],
+		link: 'https://scientific-dev.github.io/periodic-table',
 		buttons: [
-			makeBtn('https://github.com/Scientific-Dev/instant.db', 'GitHub'),
-			makeBtn('https://npmjs.com/package/instant.db', 'Link')
+			makeBtn('https://github.com/scientific-dev/periodic-table', 'GitHub')
 		]
 	},
 	{
@@ -77,6 +76,16 @@ export const Projects = [
 		buttons: [
 			makeBtn('https://github.com/Scientific-Dev/emoji-canvas', 'GitHub'),
 			makeBtn('deno.land/x/emoji_canvas', 'Deno')
+		]
+	},
+	{
+		name: 'Instant.db',
+		description: 'Instant.db helps you to make database instantly using json files for Node.js!',
+		languages: ['Javascript'],
+		link: 'https://npmjs.com/package/instant.db',
+		buttons: [
+			makeBtn('https://github.com/Scientific-Dev/instant.db', 'GitHub'),
+			makeBtn('https://npmjs.com/package/instant.db', 'Link')
 		]
 	},
 	{

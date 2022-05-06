@@ -21,6 +21,10 @@
 		</span>
 
 		<span class="svg-links">
+			<a href={project.link} class="cursor-pointer text-white">
+				<i class="fas fa-link"/>
+			</a>
+
 			{#each project.buttons as button}
 				<a href={button.href} class="cursor-pointer text-white">
 					<i class={button.svg}/>

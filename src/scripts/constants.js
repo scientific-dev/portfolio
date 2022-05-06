@@ -84,8 +84,7 @@ export const Projects = [
 		languages: ['Javascript'],
 		link: 'https://npmjs.com/package/instant.db',
 		buttons: [
-			makeBtn('https://github.com/Scientific-Dev/instant.db', 'GitHub'),
-			makeBtn('https://npmjs.com/package/instant.db', 'Link')
+			makeBtn('https://github.com/Scientific-Dev/instant.db', 'GitHub')
 		]
 	},
 	{
@@ -113,8 +112,7 @@ export const Projects = [
 		languages: ['Javascript'],
 		link: 'https://npmjs.com/package/enhanced.db',
 		buttons: [
-			makeBtn('https://github.com/Scientific-Dev/enhanced.db', 'GitHub'),
-			makeBtn('https://npmjs.com/package/enhanced.db', 'Link')
+			makeBtn('https://github.com/Scientific-Dev/enhanced.db', 'GitHub')
 		]
 	},
 	{

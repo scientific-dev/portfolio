@@ -79,6 +79,15 @@ export const Projects = [
 		]
 	},
 	{
+		name: 'Game of Life',
+		description: 'A simple website built with Svelte to play the Game of life which was invented by British mathematician John Horton Conway in 1970.',
+		languages: ['Javascript', 'Svelte'],
+		link: 'https://scientific-dev.github.io/gameoflife',
+		buttons: [
+			makeBtn('https://github.com/scientific-dev/gameoflife', 'GitHub')
+		]
+	},
+	{
 		name: 'Instant.db',
 		description: 'Instant.db helps you to make database instantly using json files for Node.js!',
 		languages: ['Javascript'],
